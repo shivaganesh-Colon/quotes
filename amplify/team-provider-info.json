@@ -10,6 +10,14 @@
       "StackName": "amplify-quotes-dev-234954",
       "StackId": "arn:aws:cloudformation:us-east-1:411958447641:stack/amplify-quotes-dev-234954/20e6b1f0-27f3-11ee-9cef-0a36dcda52bd",
       "AmplifyAppId": "d2qn1buummtgwp"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2qn1buummtgwp",
+          "type": "cicd"
+        }
+      }
     }
   }
 }

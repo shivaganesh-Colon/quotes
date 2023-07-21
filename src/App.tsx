@@ -7,7 +7,7 @@ import awsConfig from './aws-exports'
 function App() {
   return (
     <div className="App">
-      <p className='text-uppercase'>Start Shiva ganesh</p>
+      <h1 className='text-uppercase'>Start Application with AWS awmplify</h1><small>shiva Ganesh</small>
     </div>
   );
 }
