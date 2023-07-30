@@ -34,7 +34,7 @@ fetch('http://localhost:9000/upload', requestOptions)
   }
   return (
     <div className="App">
-      <h1 className='text-uppercase'>Upload excel into S3 bucket using nestjsBakcnd</h1>
+      <h1 className='text-uppercase'>Upload excel into S3 bucket using nestjsBakend , once it is uploaded it triggers lamdba function and this function will insert the data into the DynamoDB</h1>
       <input type="file" onChange={(e)=>{
          getFile(e)
       }} />
