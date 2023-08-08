@@ -5,12 +5,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import awsConfig from './aws-exports'
 
 function App() {
-  const [message, setMessage] = useState("");
- 
+  const [message, setMessage] = useState<any>(null);
+  console.log(message)
   useEffect(() => {
     fetch("http://localhost:9000")
       .then((res) =>{ res.json()})
       .then((data) => {
+    
         console.log(data)
         
         });
@@ -27,18 +28,32 @@ function App() {
 };
 // mylamdanewrole
 fetch('http://localhost:9000/upload', requestOptions)
-    .then(response => response.json())
+    .then(response =>{
+      console.log(response)
+      console.log(response.body)
+      console.log(response.status)
+
+     if(response.status == 200){
+      
+     }
+      response.json()})
     .then(data => {
       console.log(data)
+  
     });
   }
-  return (
-    <div className="App">
+  return (<>
+  
+  <div className="App">
       <h1 className='text-uppercase'>Upload excel into S3 bucket using nestjsBakend , once it is uploaded it triggers lamdba function and this function will insert the data into the DynamoDB</h1>
       <input type="file" onChange={(e)=>{
          getFile(e)
       }} />
     </div>
+    <div>{message}</div>
+  </>
+  
+    
   );
 }
 
